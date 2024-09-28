@@ -1,6 +1,5 @@
 # Sistema Bancário em Python
-
-  Este é um sistema bancário simples desenvolvido em Python, com funcionalidades para depósito, saque e extrato.
+- Sistema bancário simples desenvolvido em Python, com funcionalidades para depósito, saque e extrato.
 
 ## Funcionalidades
 
