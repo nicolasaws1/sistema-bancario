@@ -10,10 +10,10 @@ _______________________________
 
 '''
 SALDO = 0 
-COUNT = 0
+COUNT = 0 # Contador de saque
 deposito = 1
 saque = 2
-extrato = 3
+extrato = 3 
 sair = 4
 historico = []
 
@@ -42,10 +42,14 @@ def sacar(valor):
         historico.append(f"Saque de R${valor:.2f}")  # Registra o saque
         print(f"R${valor:.2f} sacados com sucesso. Saldo atual: R${SALDO:.2f}")
         COUNT += 1
+      
 def mostrar_extrato():
     print("Extrato:")
-    for transacao in historico:  # Mostra cada transação registrada
-        print(transacao)
+    if not historico:  # Verifica se o histórico está vazio
+        print("Nenhuma transação registrada.")
+    else:
+        for transacao in historico:  # Mostra cada transação registrada
+            print(transacao)
     print(f"Saldo atual: R${SALDO:.2f}")
 
 while True:
